@@ -25,3 +25,4 @@ anyio
 geopandas
 shapely
 opencv-python-headless
+pydantic-settings
