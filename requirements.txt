@@ -26,3 +26,4 @@ geopandas
 shapely
 opencv-python-headless
 pydantic-settings
+markdown
