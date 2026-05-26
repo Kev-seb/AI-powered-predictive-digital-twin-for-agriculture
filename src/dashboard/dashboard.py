@@ -1087,6 +1087,16 @@ with tabs[1]:
             ["NDVI", "NDRE", "NDWI", "GNDVI", "EVI", "SAVI", "Stress Score"],
         )
 
+        interpretations = {
+            "NDVI": "NDVI > 0.6 = healthy dense canopy | 0.3–0.6 = sparse/stressed | < 0.3 = bare/stressed.",
+            "NDRE": "NDRE > 0.4 = good chlorophyll | Declining NDRE = early N-deficiency or stress.",
+            "NDWI": "NDWI > 0.3 = water/flooding | < -0.1 = canopy water stress / drought.",
+            "GNDVI": "GNDVI highly correlated with chlorophyll concentration (Gitelson 1996).",
+            "EVI":   "EVI reduces atmospheric noise vs NDVI. Best for dense-canopy paddy.",
+            "SAVI":  "SAVI corrects for soil background — useful at early Nursery stage.",
+            "Stress Score": "Composite stress index (NDVI + NDRE + NDWI weighted). >0.5 = intervention recommended.",
+        }
+
         index_map = {
             "NDVI":        (idx["ndvi"],         "RdYlGn", -1, 1),
             "NDRE":        (idx["ndre"],         "RdYlGn", -1, 1),
